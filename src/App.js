@@ -14,10 +14,11 @@ export default function IndexPage() {
 window.addEventListener('event', function() {
     // something is performed
 }, false);
-   window.Android.handlerFoo("token");
+   window.Android.handlerFoo('event');
        
   window.postMessage('{"myEvent": true}');
-    
+
+       window.event.postMessage('Hello from JS');
   },[]);
  
   return <div>Hello World Update</div>;
