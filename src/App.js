@@ -10,7 +10,7 @@ export default function IndexPage() {
     // window.webkit.messageHandlers.bridge.postMessage("data");
     window.JS.postMessage("Hello from JS");
 
-    window.JS = new Event("event");
+    window.JS = new JS("event");
 
     window.addEventListener(
       "event",
