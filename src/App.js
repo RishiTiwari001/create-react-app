@@ -9,6 +9,11 @@ export default function IndexPage() {
    useEffect(() => {
     console.log('heyyaaa');
     // window.webkit.messageHandlers.bridge.postMessage("data");
+       window.event = new Event('event');
+
+window.addEventListener('event', function() {
+    // something is performed
+}, false);
    window.Android.handlerFoo("token");
        
   window.postMessage('{"myEvent": true}');
