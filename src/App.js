@@ -5,14 +5,14 @@ export default function IndexPage() {
     console.log('heyyaaa');
     // window.webkit.messageHandlers.bridge.postMessage("data");
   //  window.Android.mobileLoginForCaptchaResponse("token");
-    window.addEventListener(
-      'message',
-      function (event) {
-        console.log("event then")
-        window.flutter_inappwebview
-          .callHandler('handlerFoo', 'flutter moon')
-      }
-    );
+    window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
+            console.log("ready");
+
+            var div = document.body.querySelector('div');
+            div.addEventListener('click', function() {
+                window.flutter_inappwebview.callHandler('handleData', 1, true, ['bar', 5], {foo: 'baz'});
+            });
+        });
   },[]);
   return <div>Hello World Update</div>;
 }
