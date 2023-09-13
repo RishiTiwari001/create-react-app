@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import { useEffect } from 'react';
 export default function IndexPage() {
@@ -10,7 +11,7 @@ export default function IndexPage() {
     // window.webkit.messageHandlers.bridge.postMessage("data");
   //  window.Android.mobileLoginForCaptchaResponse("token");
   window.postMessage('{"myEvent": true}');
-    );
+    
   },[]);
  
   return <div>Hello World Update</div>;
