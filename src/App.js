@@ -12,7 +12,7 @@ export default function IndexPage() {
     window.addEventListener(
       'message',
       function (event) {
-        console.log("event then")
+        console.log(event , "event then")
         window.flutter_inappwebview
           .callHandler('handlerFoo', 'flutter moon')
       }
