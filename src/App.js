@@ -9,8 +9,14 @@ export default function IndexPage() {
     console.log("heyyaaa");
     // window.webkit.messageHandlers.bridge.postMessage("data");
     window.Event.postMessage("Hello from ParkPlus Hitesh Dalla");
+        window.Event2.postMessage("Hello from ParkPlus Saurabh Dalla");
+
+        window.Event3.postMessage("Hello from ParkPlus Hitesh Dalla");
+
+        window.Event4.postMessage("Hello from ParkPlus Saurabh Dalla");
 
     window.Event = new Event("event");
+    
 
     window.addEventListener(
       "event",
