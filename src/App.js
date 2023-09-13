@@ -1,13 +1,18 @@
-import React from 'react';
+import "./App.css";
 import { useEffect } from 'react';
-
 export default function IndexPage() {
-  console.log('heyyaaa');
   useEffect(() => {
     console.log('heyyaaa');
-    if (window.Barcode && window.Barcode.postMessage) {
-      Barcode.postMessage("hello bro hi");
-   }
-  });
-  return <div>Hello World.</div>;
+    // window.webkit.messageHandlers.bridge.postMessage("data");
+  //  window.Android.mobileLoginForCaptchaResponse("token");
+    window.addEventListener(
+      'message',
+      function (event) {
+        console.log("event then")
+        window.flutter_inappwebview
+          .callHandler('handlerFoo', 'flutter moon')
+      }
+    );
+  },[]);
+  return <div>Hello World Update</div>;
 }
