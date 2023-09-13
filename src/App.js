@@ -9,13 +9,7 @@ export default function IndexPage() {
     console.log('heyyaaa');
     // window.webkit.messageHandlers.bridge.postMessage("data");
   //  window.Android.mobileLoginForCaptchaResponse("token");
-    document.addEventListener(
-      'message',
-      function (event) {
-        console.log(event , "event then")
-        document.flutter_inappwebview
-          .callHandler('handlerFoo', 'flutter moon')
-      }
+  window.postMessage('{"myEvent": true}');
     );
   },[]);
  
