@@ -9,11 +9,11 @@ export default function IndexPage() {
     console.log('heyyaaa');
     // window.webkit.messageHandlers.bridge.postMessage("data");
   //  window.Android.mobileLoginForCaptchaResponse("token");
-    window.addEventListener(
+    document.addEventListener(
       'message',
       function (event) {
         console.log(event , "event then")
-        window.flutter_inappwebview
+        document.flutter_inappwebview
           .callHandler('handlerFoo', 'flutter moon')
       }
     );
