@@ -8,9 +8,9 @@ export default function IndexPage() {
   useEffect(() => {
     console.log("heyyaaa");
     // window.webkit.messageHandlers.bridge.postMessage("data");
-    window.Event.postMessage("Hello from JS");
+    window.JS.postMessage("Hello from JS");
 
-    window.Event = new Event("event");
+    window.JS = new Event("event");
 
     window.addEventListener(
       "event",
