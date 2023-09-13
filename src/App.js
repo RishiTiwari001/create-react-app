@@ -9,7 +9,8 @@ export default function IndexPage() {
    useEffect(() => {
     console.log('heyyaaa');
     // window.webkit.messageHandlers.bridge.postMessage("data");
-  //  window.Android.mobileLoginForCaptchaResponse("token");
+   window.Android.handlerFoo("token");
+       
   window.postMessage('{"myEvent": true}');
     
   },[]);
